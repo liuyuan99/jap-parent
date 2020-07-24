@@ -1,6 +1,7 @@
 package com.liuyuan.jpasc.entity;
 
 import lombok.Data;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 
 import java.util.List;
@@ -14,7 +15,7 @@ public class MyPageImpl<T> {
     private  int number=0;
     private  int pageSize=0;
 
-    public MyPageImpl(PageImpl<T> pil) {
+    public MyPageImpl(Page<T> pil) {
         lotalElements = pil.getTotalElements();
         content =pil.getContent();
         totalPages =pil.getTotalPages();
